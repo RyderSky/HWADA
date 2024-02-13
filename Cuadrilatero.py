@@ -1,8 +1,10 @@
-up = eval(input("Ingrese medida del lado superior (\"Solo numero\"): "))
-down = eval(input("Ingrese medida del lado inferior (\"Solo numero\"): "))
-left = eval(input("Ingrese medida del lado izquierdo (\"Solo numero\"): "))
-right = eval(input("Ingrese medida del lado derecho (\"Solo numero\"): "))
+side = []
 
-if (up == down) and (down == left) and (left == right): print("Cuadrado")
-elif (up == down) and (left == right) and (up != left): print("Rectangulo")
-else: print("Otro cuadrilatero")
+for x in range(4):
+    pos = x+1
+    side.append(eval(input("Ingrese valor para posicion {0}: ".format(pos))))
+     
+side.sort()
+if side[0] == side[3]: print("Cuadrado")
+elif side[0] == side[1] and side[2] == side[3]: print("Rectangulo")
+else: print("Otro tipo de cuadrilatero")

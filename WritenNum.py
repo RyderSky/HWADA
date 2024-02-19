@@ -1,21 +1,15 @@
 def convertir(numero):
     unidades = {
-        0: 'cero', 1: 'uno', 2: 'dos', 3: 'tres', 4: 'cuatro', 5: 'cinco', 6: 'seis',
-        7: 'siete', 8: 'ocho', 9: 'nueve'
+        0: 'cero', 1: 'uno', 2: 'dos', 3: 'tres', 4: 'cuatro', 5: 'cinco', 6: 'seis', 7: 'siete', 8: 'ocho', 9: 'nueve'
     }
     excepciones = {
-        10: 'diez', 11: 'once', 12: 'doce', 13: 'trece', 14: 'catorce', 15: 'quince',
-        20: 'veinte', 30: 'treinta', 40: 'cuarenta', 50: 'cincuenta', 60: 'sesenta',
-        70: 'setenta', 80: 'ochenta', 90: 'noventa'
+        10: 'diez', 11: 'once', 12: 'doce', 13: 'trece', 14: 'catorce', 15: 'quince', 20: 'veinte', 30: 'treinta', 40: 'cuarenta', 50: 'cincuenta', 60: 'sesenta', 70: 'setenta', 80: 'ochenta', 90: 'noventa'
     }
     decenas = {
-        2: 'veinti', 3: 'treinta y ', 4: 'cuarenta y ', 5: 'cincuenta y ',
-        6: 'sesenta y ', 7: 'setenta y ', 8: 'ochenta y ', 9: 'noventa y '
+        2: 'veinti', 3: 'treinta y ', 4: 'cuarenta y ', 5: 'cincuenta y ', 6: 'sesenta y ', 7: 'setenta y ', 8: 'ochenta y ', 9: 'noventa y '
     }
     centenas = {
-        1: 'ciento ', 2: 'doscientos ', 3: 'trescientos ', 4: 'cuatrocientos ',
-        5: 'quinientos ', 6: 'seiscientos ', 7: 'setecientos ', 8: 'ochocientos ',
-        9: 'novecientos '
+        1: 'ciento ', 2: 'doscientos ', 3: 'trescientos ', 4: 'cuatrocientos ', 5: 'quinientos ', 6: 'seiscientos ', 7: 'setecientos ', 8: 'ochocientos ', 9: 'novecientos '
     }
     miles = {
         1: 'mil', 1000: 'mil'

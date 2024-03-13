@@ -1,0 +1,27 @@
+#!/bin/python3
+
+#
+# Complete the 'miniMaxSum' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def miniMaxSum(arr):
+    sums = []
+    sum = 0
+    for x in range(5):
+        for y in range(5):
+            if (y == x):
+                continue
+            else:
+                sum += arr[y]
+        sums.append(sum)
+        sum = 0
+    sums.sort()
+    print(sums[0], sums[4])
+
+if __name__ == '__main__':
+
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)

@@ -1,4 +1,6 @@
 def insort(input_ar):
+    if len(input_ar) <= 1:
+        return input_ar
     for x in range(1, len(input_ar)):
         current = input_ar[x]
         i = x - 1

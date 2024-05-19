@@ -1,12 +1,11 @@
 def busort(input_ar):
+    if len(input_ar) <= 1:
+        return input_ar
     shift = False
     for x in range(0, len(input_ar)-1):
         if input_ar[x] > input_ar[x+1]:
             shift = True
-            tmp1 = input_ar[x]
-            tmp2 = input_ar[x+1]
-            input_ar[x] = tmp2
-            input_ar[x+1] = tmp1
+            input_ar[x], input_ar[x+1] = input_ar[x+1], input_ar[x]
     if shift == True:
         busort(input_ar) 
     return input_ar

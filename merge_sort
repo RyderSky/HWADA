@@ -1,0 +1,27 @@
+def msort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left_half = arr[:mid]
+    right_half = arr[mid:]
+    left_sorted = msort(left_half)
+    right_sorted = msort(right_half)
+    return merge(left_sorted, right_sorted)
+
+def merge(left, right):
+    sorted_array = []
+    x = i = 0
+    while x < len(left) and i < len(right):
+        if left[x] < right[i]:
+            sorted_array.append(left[x])
+            x += 1
+        else:
+            sorted_array.append(right[i])
+            i += 1
+    sorted_array.extend(left[x:])
+    sorted_array.extend(right[i:])
+    return sorted_array
+
+example_ar = [45, 1, 23, 698, 74, 125, 632, 547, 256]
+print("Sorting array: ", example_ar)
+print("Sorted  array: ", msort(example_ar))
